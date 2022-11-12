@@ -18,9 +18,13 @@ $ npm install -g @nestjs/cli
 $ npm run docker:up
 ```
 
-1. Clone **.env.example** and rename to **.env**
+1. Crear archivo **.env** y agregar las siguientes lineas:
 
-2. Fill environment variables en **.env**
+```
+MONGODB = mongodb://localhost:27017/nest-pokemon
+PORT = 3000
+DEFAULT_LIMIT = 5
+```
 
 ## Running the app
 
@@ -30,9 +34,16 @@ $ npm run start
 
 # watch mode
 $ npm run start:dev
+```
 
-# production mode
-$ npm run start:prod
+## Productio Build
+
+1. Crear archivo `env.prod`
+2. Llenar las variables de prod
+3. Ejecutar el comando
+
+```bash
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
 ```
 
 ## Seed
