@@ -18,6 +18,10 @@ $ npm install -g @nestjs/cli
 $ npm run docker:up
 ```
 
+1. Clone **.env.example** and rename to **.env**
+
+2. Fill environment variables en **.env**
+
 ## Running the app
 
 ```bash
